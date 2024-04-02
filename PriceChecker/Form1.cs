@@ -5,9 +5,21 @@ namespace PriceChecker
 {
     public partial class Form1 : Form
     {
+        List<TrackerItem>? items;
         public Form1()
         {
             InitializeComponent();
+            items = new List<TrackerItem>();
+
+            if (File.Exists("data.json"))
+            {
+                var data = File.ReadAllText("data.json");
+                items = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TrackerItem>>(data);
+            }
+            else
+            {
+                items = new List<TrackerItem>();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -18,6 +30,23 @@ namespace PriceChecker
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void refreshRec()
+        {
+            File.Delete("data.json");
+            string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(items, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText("data.json", newJsonResult);
+        }
+
+        private void syncList()
+        {
+            listTrackers.Items.Clear();
+
+            foreach (TrackerItem item in items)
+            {
+                listTrackers.Items.Add(new ListViewItem(new String[] { item.Name, item.PrevVal, item.CurrVal, item.LastChecked, item.LastChanged }));
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -55,6 +84,36 @@ namespace PriceChecker
             }
 
 
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+            items.Add(new TrackerItem
+            {
+                Name = txtName.Text,
+                URL = txtUrl.Text,
+                Selector = textSelector.Text,
+                CurrVal = "N/A",
+                PrevVal = "N/A",
+                LastChanged = "N/A",
+                LastChecked = "N/A"
+            });
+            syncList();
+            refreshRec();
+
+        }
+
+        private void Removebutton_Click(object sender, EventArgs e)
+        {
+            var sels = listTrackers.SelectedIndices;
+
+            foreach (var sel in sels)
+            {
+                items.RemoveAt((int)sel);
+
+                syncList();
+                refreshRec();
+            }
         }
     }
 }

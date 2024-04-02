@@ -153,6 +153,7 @@
             Addbutton.TabIndex = 9;
             Addbutton.Text = "Add";
             Addbutton.UseVisualStyleBackColor = true;
+            Addbutton.Click += Addbutton_Click;
             // 
             // Removebutton
             // 
@@ -164,6 +165,7 @@
             Removebutton.TabIndex = 10;
             Removebutton.Text = "Remove";
             Removebutton.UseVisualStyleBackColor = false;
+            Removebutton.Click += Removebutton_Click;
             // 
             // Form1
             // 
