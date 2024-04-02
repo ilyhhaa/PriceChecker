@@ -42,6 +42,8 @@
             hdrLastChanged = new ColumnHeader();
             button1 = new Button();
             lblTest = new Label();
+            Addbutton = new Button();
+            Removebutton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -142,11 +144,34 @@
             lblTest.TabIndex = 8;
             lblTest.Text = "__";
             // 
+            // Addbutton
+            // 
+            Addbutton.ForeColor = SystemColors.Highlight;
+            Addbutton.Location = new Point(68, 180);
+            Addbutton.Name = "Addbutton";
+            Addbutton.Size = new Size(75, 23);
+            Addbutton.TabIndex = 9;
+            Addbutton.Text = "Add";
+            Addbutton.UseVisualStyleBackColor = true;
+            // 
+            // Removebutton
+            // 
+            Removebutton.BackColor = Color.DarkGray;
+            Removebutton.ForeColor = Color.Maroon;
+            Removebutton.Location = new Point(149, 180);
+            Removebutton.Name = "Removebutton";
+            Removebutton.Size = new Size(75, 23);
+            Removebutton.TabIndex = 10;
+            Removebutton.Text = "Remove";
+            Removebutton.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Removebutton);
+            Controls.Add(Addbutton);
             Controls.Add(lblTest);
             Controls.Add(button1);
             Controls.Add(listTrackers);
@@ -179,5 +204,7 @@
         private ColumnHeader hdrLastChanged;
         private Button button1;
         private Label lblTest;
+        private Button Addbutton;
+        private Button Removebutton;
     }
 }
