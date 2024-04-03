@@ -46,6 +46,7 @@
             Removebutton = new Button();
             trackBar1 = new TrackBar();
             StartTrackingButton = new Button();
+            lblFrequency = new Label();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
@@ -130,7 +131,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(527, 86);
+            button1.Location = new Point(524, 70);
             button1.Name = "button1";
             button1.Size = new Size(169, 34);
             button1.TabIndex = 7;
@@ -141,7 +142,7 @@
             // lblTest
             // 
             lblTest.AutoSize = true;
-            lblTest.Location = new Point(599, 49);
+            lblTest.Location = new Point(604, 44);
             lblTest.Name = "lblTest";
             lblTest.Size = new Size(17, 15);
             lblTest.TabIndex = 8;
@@ -172,7 +173,7 @@
             // 
             // trackBar1
             // 
-            trackBar1.Location = new Point(566, 143);
+            trackBar1.Location = new Point(557, 130);
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(104, 45);
             trackBar1.TabIndex = 11;
@@ -189,11 +190,21 @@
             StartTrackingButton.UseVisualStyleBackColor = true;
             StartTrackingButton.Click += StartTrackingButton_Click;
             // 
+            // lblFrequency
+            // 
+            lblFrequency.AutoSize = true;
+            lblFrequency.Location = new Point(604, 160);
+            lblFrequency.Name = "lblFrequency";
+            lblFrequency.Size = new Size(12, 15);
+            lblFrequency.TabIndex = 13;
+            lblFrequency.Text = "_";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblFrequency);
             Controls.Add(StartTrackingButton);
             Controls.Add(trackBar1);
             Controls.Add(Removebutton);
@@ -235,5 +246,6 @@
         private Button Removebutton;
         private TrackBar trackBar1;
         private Button StartTrackingButton;
+        private Label lblFrequency;
     }
 }

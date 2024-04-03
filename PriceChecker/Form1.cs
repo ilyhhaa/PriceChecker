@@ -119,12 +119,54 @@ namespace PriceChecker
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            
+            switch (trackBar1.Value)
+            {
+                case 0:
+                    DataRefresher.frequency = 600000;
+                    lblFrequency.Text = "10 Min";
+                    break;
+                case 1:
+                    DataRefresher.frequency = 1800000;
+                    lblFrequency.Text = "30 Min";
+                    break;
+                case 2:
+                    DataRefresher.frequency = 3600000;
+                    lblFrequency.Text = "1 Hour";
+                    break;
+                case 3:
+                    DataRefresher.frequency = 5400000;
+                    lblFrequency.Text = "1.5 Hour";
+                    break;
+                case 4:
+                    DataRefresher.frequency = 43200000;
+                    lblFrequency.Text = "12 Hours";
+                    break;
+                case 5:
+                    DataRefresher.frequency = 86400000;
+                    lblFrequency.Text = "24 Hours";
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void StartTrackingButton_Click(object sender, EventArgs e)
         {
-            
+            if (StartTrackingButton.Text == "Start Checking")
+            {
+                DataRefresher.form1 = this;
+                DataRefresher.trackers = items;
+                DataRefresher.keepRunning = true;
+                ThreadStart start = new ThreadStart(DataRefresher.RefreshData);
+                Thread thread = new Thread(start);
+                thread.Start();
+                StartTrackingButton.Text = "Stop Tracking";
+            }
+            else
+            {
+                DataRefresher.keepRunning = false;
+                StartTrackingButton.Text = "Start Checking";
+            }
         }
     }
 }
