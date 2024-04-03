@@ -44,6 +44,9 @@
             lblTest = new Label();
             Addbutton = new Button();
             Removebutton = new Button();
+            trackBar1 = new TrackBar();
+            StartTrackingButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -167,11 +170,32 @@
             Removebutton.UseVisualStyleBackColor = false;
             Removebutton.Click += Removebutton_Click;
             // 
+            // trackBar1
+            // 
+            trackBar1.Location = new Point(566, 143);
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new Size(104, 45);
+            trackBar1.TabIndex = 11;
+            trackBar1.Value = 5;
+            trackBar1.Scroll += trackBar1_Scroll;
+            // 
+            // StartTrackingButton
+            // 
+            StartTrackingButton.Location = new Point(566, 402);
+            StartTrackingButton.Name = "StartTrackingButton";
+            StartTrackingButton.Size = new Size(208, 36);
+            StartTrackingButton.TabIndex = 12;
+            StartTrackingButton.Text = "Start Tracking";
+            StartTrackingButton.UseVisualStyleBackColor = true;
+            StartTrackingButton.Click += StartTrackingButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(StartTrackingButton);
+            Controls.Add(trackBar1);
             Controls.Add(Removebutton);
             Controls.Add(Addbutton);
             Controls.Add(lblTest);
@@ -186,6 +210,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,5 +233,7 @@
         private Label lblTest;
         private Button Addbutton;
         private Button Removebutton;
+        private TrackBar trackBar1;
+        private Button StartTrackingButton;
     }
 }

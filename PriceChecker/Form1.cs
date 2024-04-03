@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+
 namespace PriceChecker
 {
     public partial class Form1 : Form
@@ -114,6 +115,16 @@ namespace PriceChecker
                 syncList();
                 refreshRec();
             }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void StartTrackingButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
