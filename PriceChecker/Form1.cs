@@ -69,7 +69,7 @@ namespace PriceChecker
                 driver.Manage().Window.Minimize();
                 driver.Url = txtUrl.Text;
                 //https://mobi-lux.by/kompyutery-i-periferiya/videokarty/sapphire/videokarta-sapphire-radeon-rx-6700-xt-12gb-gddr6-11306-02-20g
-                System.Threading.Thread.Sleep(2000);
+                System.Threading.Thread.Sleep(3000);
 
                 var v = driver.FindElement(By.XPath(textSelector.Text));
                 ////p[@class='sku__price ']
@@ -169,7 +169,7 @@ namespace PriceChecker
 
         private void StartTrackingButton_Click(object sender, EventArgs e)
         {
-            if (StartTrackingButton.Text == "Start Checking")
+            if (StartTrackingButton.Text == "Start Tracking")
             {
                 DataRefresher.form1 = this;
                 DataRefresher.trackers = items;
@@ -182,7 +182,7 @@ namespace PriceChecker
             else
             {
                 DataRefresher.keepRunning = false;
-                StartTrackingButton.Text = "Start Checking";
+                StartTrackingButton.Text = "Start Tracking";
             }
         }
     }
@@ -193,3 +193,13 @@ namespace PriceChecker
 Incorrect xpath(exclude)
 Delay in loading the item(probably)
 Dynamic page change(Unlikely)*/
+
+
+
+
+/*
+I put a big delay and a new error came up 
+Failed to execute 'evaluate' on 'Document':The string 
+Can't find an element on the page? 
+Let's try to rewrite for Css Selector
+ */
