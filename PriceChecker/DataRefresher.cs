@@ -38,7 +38,7 @@ namespace PriceChecker
                         try
                         {
                             driver.Url = item.URL.Trim();
-                            System.Threading.Thread.Sleep(1000);
+                            System.Threading.Thread.Sleep(1000); 
                                 var v = driver.FindElement(By.XPath(item.URL.Trim()));
                             var str = v.Text;
                             if (str != null && str.Length > 0)

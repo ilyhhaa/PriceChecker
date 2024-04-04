@@ -187,3 +187,9 @@ namespace PriceChecker
         }
     }
 }
+
+
+/*The error says selenium can't find the item, this could be due to:
+Incorrect xpath(exclude)
+Delay in loading the item(probably)
+Dynamic page change(Unlikely)*/
