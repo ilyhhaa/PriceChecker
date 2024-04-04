@@ -20,7 +20,23 @@ Name - takes an arbitrary text value, this is the name you want to give to the t
 URL - field to send a link to the product page.
 Selector - The field to which you need to pass the Xpath code of the item that contains the data to be tracked.
 
+How do I actually get the necessary Xpath code for an element? The easiest way is to download the extension for google chrome at the link:
 
+https://chromewebstore.google.com/detail/selectorshub/ndgimibanhlabgdgjcpbbndiehljcpfh?pli=1
+
+Or install a similar one. The extension allows you to select the desired element and get its Xpath code by right-clicking on it.
+
+Copying the Xpath code paste it into the Selector field.
+
+Usage:
+After filling in all the fields, click the Test button to check if the passed Xpath code works, then you can click the Add button and add the object to the list of tracked objects. The start button will start the tracking and the slidebar will allow you to set the frequency of data updates.
+
+
+
+
+
+
+ 
 
  
 Доброго времени суток!
@@ -44,3 +60,13 @@ Name - принимает произвольное текстовое значе
 URL - поле для передачи ссылки на страницу товара.
 Selector - Поле в которое необходимо передать Xpath code, элемента, в котором находятся требующие отслеживания данные.
 
+Как собственно получить необходимый Xpath code для элемента? Наиболее просто способ - скачать расширение для google chrome по ссылке:
+
+https://chromewebstore.google.com/detail/selectorshub/ndgimibanhlabgdgjcpbbndiehljcpfh?pli=1
+
+Или установить схожее. Расширение предоставляет возможность выделить необходимый элемент и получить его Xpath code при нажатии правой кнопки мыши.
+
+Скопировав Xpath code  вставляем его в поле Selector.
+
+Использование:
+После заполнения всех полей, нажмите кнопку Test, чтобы проверить работает ли переданный Xpath code, далее можно нажать кнопку Add и добавить объект в перечень отслеживаемых. Кнопка старт запустит отслеживание, а slidebar помжет настроить частту обновления данных.
