@@ -150,6 +150,23 @@ namespace PriceChecker
             }
         }
 
+        public void UpdateRec()
+        {
+            try
+            {
+                listTrackers.BeginInvoke((MethodInvoker)delegate ()
+                {
+                    syncList();
+                    refreshRec();
+                });
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+        }
+
         private void StartTrackingButton_Click(object sender, EventArgs e)
         {
             if (StartTrackingButton.Text == "Start Checking")

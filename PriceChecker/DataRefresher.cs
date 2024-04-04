@@ -61,7 +61,7 @@ namespace PriceChecker
                     }
                     lastRun = DateTime.Now;
                 }
-                form1.Update();
+                form1.UpdateRec();
                 Thread.Sleep(5000);
             }
             driver.Quit();
