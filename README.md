@@ -2,7 +2,7 @@
 Good day to u!
 
 I decided to make a small price tracker to track the prices of components for my computer.
-Technologies used:
+Technologies and Lib used:
 .Net Framework, WinForms,Selenium,Newtonsoft.
 
 Instructions for use:
@@ -42,7 +42,7 @@ After filling in all the fields, click the Test button to check if the passed Xp
 Доброго времени суток!
 
 Решил сделать небольшой  отслеживатель цен, чтобы отслеживать цены на комплектующие для своего компьютера.
-Используемые техногологии:
+Используемые техногологии и библиотеки:
 .Net Framework, WinForms,Selenium,Newtonsoft.
 
 Инструкция к использованию:
