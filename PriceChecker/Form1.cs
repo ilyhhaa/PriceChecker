@@ -189,17 +189,3 @@ namespace PriceChecker
 }
 
 
-/*The error says selenium can't find the item, this could be due to:
-Incorrect xpath(exclude)
-Delay in loading the item(probably)
-Dynamic page change(Unlikely)*/
-
-
-
-
-/*
-I put a big delay and a new error came up 
-Failed to execute 'evaluate' on 'Document':The string 
-Can't find an element on the page? 
-Let's try to rewrite for Css Selector
- */
